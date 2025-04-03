@@ -1,0 +1,114 @@
+/* Fade In Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Suite Card Animations */
+.suite-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.suite-card.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effects */
+.suite-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.suite-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Service Card Animations */
+.service-card {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.6s ease-out;
+}
+
+.service-card.animated {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Floating Button Pulse Animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.floating-reserve-btn {
+    animation: pulse 2s infinite;
+}
+
+/* Navigation Links Entrance Animation */
+@keyframes slideIn {
+    from { 
+        opacity: 0; 
+        transform: translateX(50px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+.nav-links li {
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+}
+
+.nav-links li:nth-child(1) { animation-delay: 0.1s; }
+.nav-links li:nth-child(2) { animation-delay: 0.2s; }
+.nav-links li:nth-child(3) { animation-delay: 0.3s; }
+.nav-links li:nth-child(4) { animation-delay: 0.4s; }
+.nav-links li:nth-child(5) { animation-delay: 0.5s; }
+
+/* Modal Entrance Animation */
+@keyframes modalSlideIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(-50px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.modal-content {
+    animation: modalSlideIn 0.5s ease-out;
+}
+
+/* Text Reveal Animation */
+@keyframes textReveal {
+    from { 
+        opacity: 0; 
+        clip-path: inset(0 100% 0 0);
+    }
+    to { 
+        opacity: 1; 
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.banner-content h2,
+.section-title h2 {
+    opacity: 0;
+    animation: textReveal 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.banner-content p {
+    opacity: 0;
+    animation: textReveal 1s forwards;
+    animation-delay: 0.7s;
+}

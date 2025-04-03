@@ -1,0 +1,126 @@
+@keyframes fodeIn {
+   from{
+        opacity: 0;
+        transform: translateY(20px);
+   } 
+    to{
+          opacity: 1;
+          transform: translateY(0);
+    }
+}
+
+.suite-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.3s ease-out;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease;
+}
+.suite-card animated {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fodeIn 0.5s ease-out forwards;
+}
+
+.suite-card:hover {
+    transform: scale(0.9);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+}
+
+.service-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transform: scale(0.9);
+    transition: all 0.6s ease-out;
+}
+
+.service-card animated {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.floating-reserve-btn {
+    animation: pulse 2s infinite;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.nav-links li {
+    opacity: 0;
+    transform: translateX(50%);
+    animation: slideIn 0.5s forwards;
+}
+
+.nav-links li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.nav-links li:nth-child(2) {
+    animation-delay: 0.2s;
+}   
+.nav-links li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.nav-links li:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.nav-links li:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+@keyframes modoSlideIn {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    animation: modoSlideIn 0.5s ease-out;
+}
+
+@keyframes textReveal{
+    from  {
+        opacity: 0;
+        clip-path: inset(0 100% 0);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0);
+    }
+}
+
+.banner-conten h2, .section-title h2 {
+ animation: textReveal 1s  forwards;
+animation-delay: 0.5s;   
+ opacity: 0;
+}
+
+.banner-content p{
+opacity: 0;
+    animation: textReveal 1s forwards;
+    animation-delay: 1s
+}
